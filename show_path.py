@@ -7,11 +7,11 @@ d3: y(string)
 d4: x(string)
 d5: osmid(string)
 EDGE:
-8: name
-9: length
-10: osmid
-12: oneway
-16:geometry
+d8: name
+d9: length
+d10: osmid
+d12: oneway
+d16:geometry
 '''
 H = nx.read_graphml('manhatten.graphml')
 G = nx.Graph(H)
