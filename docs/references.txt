@@ -1,8 +1,16 @@
-1. animation
-2. https://www.kaggle.com/datasets/crailtap/street-network-of-new-york-in-graphml #dataset
-3. https://www.kaggle.com/code/usui113yst/basic-network-analysis-tutorial #netorkx on graphml
-4. https://www.softwaretestinghelp.com/minimum-spanning-tree-tutorial/ #algorithm
-5. https://networkx.org/documentation/networkx-1.9/reference/index.html #everything networkx
-6. http://www.ics.uci.edu/~eppstein/PADS/ #programming, algorithms
+1. https://kylekizirian.github.io/prims-algorithm.html
+    #data structures and graphs
+2. https://www.kaggle.com/datasets/crailtap/street-network-of-new-york-in-graphml 
+    #dataset
+3. https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/KA5HJ3
+	#dataset
+4. https://www.kaggle.com/code/usui113yst/basic-network-analysis-tutorial 
+    #netorkx on graphml
+5. https://www.softwaretestinghelp.com/minimum-spanning-tree-tutorial/ 
+    #algorithm
+6. https://networkx.org/documentation/networkx-1.9/reference/index.html  
+    #everything networkx
+7. http://www.ics.uci.edu/~eppstein/PADS/ 
+    #programming, algorithms
 
 
