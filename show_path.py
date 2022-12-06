@@ -2,7 +2,7 @@ import time
 import warnings
 import networkx as nx
 import matplotlib.pyplot as plt
-from algorithms1 import tree
+# from algorithms import tree
 from networkx.algorithms import tree
 
 def init():
@@ -120,10 +120,10 @@ def implement_algo(algorithm, size):
     for i in range(runs):
         if algorithm == 'prim' or algorithm == 'both':
             algorithm = 'prim'
-            do_algo(graph, algorithm)
+            do_algo1(graph, algorithm)
             algorithm = 'kruskal'
         else:
-            do_algo(graph, algorithm)
+            do_algo1(graph, algorithm)
 
 
 if __name__ == "__main__":
