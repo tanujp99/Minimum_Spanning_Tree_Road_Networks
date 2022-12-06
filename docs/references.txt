@@ -1,0 +1,8 @@
+1. animation
+2. https://www.kaggle.com/datasets/crailtap/street-network-of-new-york-in-graphml #dataset
+3. https://www.kaggle.com/code/usui113yst/basic-network-analysis-tutorial #netorkx on graphml
+4. https://www.softwaretestinghelp.com/minimum-spanning-tree-tutorial/ #algorithm
+5. https://networkx.org/documentation/networkx-1.9/reference/index.html #everything networkx
+6. http://www.ics.uci.edu/~eppstein/PADS/ #programming, algorithms
+
+

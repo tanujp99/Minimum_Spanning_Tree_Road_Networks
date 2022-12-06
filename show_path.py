@@ -2,15 +2,42 @@ import time
 import warnings
 import networkx as nx
 import matplotlib.pyplot as plt
+from algorithms1 import tree
 from networkx.algorithms import tree
 
 def init():
-    graphsize = 'large'   #possible values: 'small', 'large'
-    algorithm = 'both' #possible values: 'none', 'kruskal', 'prim', 'both'
+    
+    """
+    Initialise Variables used for the code
 
-    return graphsize, algorithm
+    Possible Values
+    ----------
+    graphsize : 'small', 'large'
+
+    algorithm : 'none', 'kruskal', 'prim', 'both'
+        'none' Generate the graph passed in the dataset.
+        'kruskal' Implements Kruskal's algorithm to generate and show minimum spanning tree and print running time in console
+        'prim' Implements Prim's algorithm to generate and show minimum spanning tree and print running time in console
+        'both' Will NOT generate graphs:  only runtime-comparative values printed in console
+
+    node_size : float
+        Recommended 3 for 'small' graphsize, 0.5 for 'large' graphsize
+    """
+    
+    graphsize = 'large' 
+    algorithm = 'both' 
+    node_size = 3 
+
+    return graphsize, algorithm, node_size
 
 def import_dataset(size):
+    """
+    Import dataset in Graphml format.according to the values initialised
+    Parameters
+    ----------
+    size : string
+        Size of dataset to be used
+    """
     if size == 'small':
         dataset = 'manhatten.graphml'
     elif size == 'large':
@@ -41,16 +68,18 @@ def make_graph_ds(data):
 def draw_graph(data, algorithm):
     global graph_initialised
     global pos
+    global node_size
     G = make_graph_ds(data)
     warnings.filterwarnings("ignore")
     print(f"\n{nx.info(G)}")
     if algorithm == 'none':
         pos = set_node_position(G)
-        nx.draw(G,pos=pos, node_size=10)
+        make_undirected(G)
+        nx.draw(G,pos=pos, node_size=node_size)
         return None
     else:
         if graph_initialised is True:
-            nx.draw(G,pos=pos, node_size=10)
+            nx.draw(G,pos=pos, node_size=node_size)
             return None
         else:
             pos = set_node_position(G)
@@ -99,7 +128,7 @@ def implement_algo(algorithm, size):
 
 if __name__ == "__main__":
     now = time.time()
-    graphsize, algorithm = init()
+    graphsize, algorithm, node_size = init()
     graph_initialised = False
     pos = {}
     implement_algo(algorithm, graphsize)
