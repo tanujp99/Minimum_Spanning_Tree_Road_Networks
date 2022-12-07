@@ -10,19 +10,20 @@ def init():
 
     Possible Values
     ----------
-    graphsize : 'tiny', 'small', 'medium', 'large'
+    graphsize : 'tiny', 'small', 'medium', 'large', 'huge'
 
     algorithm : 'none', 'kruskal', 'prim', 'both'
         'none' Generate the graph passed in the dataset.
         'kruskal' Implements Kruskal's algorithm to generate and show minimum spanning tree and print running time in console
         'prim' Implements Prim's algorithm to generate and show minimum spanning tree and print running time in console
         'both' Will NOT generate graphs:  only runtime-comparative values printed in console
+        Recommended: Use only 'both' for 'large' and 'huge' graphsize values, the program uses a lot of resources and time for these datasets
 
     node_size : float
         Recommended 3 for 'small' graphsize, 0.5 for 'large' graphsize
     """
-    graphsize = 'tiny'
-    algorithm = 'both'
+    graphsize = 'medium'
+    algorithm = 'prim'
     node_size = 3
     return graphsize, algorithm, node_size
 
@@ -47,6 +48,9 @@ def import_dataset(size):
     elif size == 'large':
         dataset = 'dataset/los_angeles.graphml'
         weight = 'd19'
+    elif size == 'huge':
+        dataset = 'dataset/tokyo.graphml'
+        weight = 'd18'
     else:
         return None
     return nx.read_graphml(dataset),weight
@@ -110,7 +114,10 @@ def draw_graph(data, algorithm):
 def do_algo(graph, algorithm, weight):
     """
     Records and runs the Minimum Spanning Tree method
-    Not implemented: gives bad results
+    
+    Not implemented: for 'tiny' 'small' 'medium' datasets gives bad results
+    
+    Recommended: works well with only 'large' and 'huge' datasets
     """
     start = time.time()
     mst = tree.minimum_spanning_edges(graph, algorithm=algorithm, weight=weight)
@@ -135,7 +142,7 @@ def do_algo1(graph, algorithm, weight):
     time_taken = (end-start) * 10**3 #time in ms
 
     print(f"Algorithm: {algorithm}\nTime taken: {time_taken:.03f}ms")
-    now = start + end - start
+    now = start + end - start1
 
 def implement_algo(algorithm, size):
     """
