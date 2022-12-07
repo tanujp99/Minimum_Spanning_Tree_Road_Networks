@@ -1,4 +1,4 @@
---------------
+<!-- -------------- -->
 main.py                     : main code file, run this on default
 mst.py                      : code containing the algorithms. This file is called by main.py
 dataset/                    : directory with various datasets in .graphml format
@@ -14,10 +14,10 @@ docs/                       : directory with outputs, results and report
 references.txt              : references for this project
 README.md                   : information to run the program
 
---------------
+<!-- -------------- -->
 The code uses Networkx library to handle the data and graphs. Install the networkx library running the following line in terminal:
 pip install networkx 
---------------
+<!-- -------------- -->
 
 main.py
     init() method contains variables to be changed to run the code accordingly
@@ -36,4 +36,4 @@ mst.py
     kruskal_mst_edges() implementation of Kruskal's algorithm on the graph of interest
     prim_mst_edges() implementation of Prium's algorithm on the graph of interest
     minimum_spanning_edges() method deals with calling the other functions
---------------
+<!-- -------------- -->
