@@ -4,13 +4,14 @@ mst.py                      : code containing the algorithms. This file is calle
 dataset/                    : directory with various datasets in .graphml format
         /tokyo.graphml      : huge dataset with 898,430 nodes
         /los_angeles.graphml: large dataset with 297,333 nodes
-        /newyork.graphml    : medium dataset with 54,128
-        /manhatten.graphml  : small dataset with 4,426
+        /newyork.graphml    : medium dataset with 54,128 nodes
+        /manhatten.graphml  : small dataset with 4,426 nodes 
         /maldives.graphml   : tiny dataset with 639 nodes
 docs/                       : directory with outputs, results and report
         /code_algorithms/   : screenshots of implementation of prims and kruskals algorithm from mst.py
         /graphs/            : generated graphs including original data, mst generated after running mst.py
         /results/           : snapshots of program output on different datasets where algorithm = 'both'
+        /PROJECT_REPORT.pdf : report
 references.txt              : references for this project
 README.md                   : information to run the program
 

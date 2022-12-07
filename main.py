@@ -22,9 +22,9 @@ def init():
     node_size : float
         Recommended 3 for 'small' graphsize, 0.5 for 'large' graphsize
     """
-    graphsize = 'medium'
-    algorithm = 'prim'
-    node_size = 3
+    graphsize = 'large'
+    algorithm = 'both'
+    node_size = 0.1
     return graphsize, algorithm, node_size
 
 def import_dataset(size):
